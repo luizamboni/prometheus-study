@@ -1,0 +1,13 @@
+version: '2'
+services:
+  prometheus:
+    # image: 
+    build: .
+    ports:
+      - "9090:9090"
+    restart: always
+
+  app:
+    build: ./app/.
+    ports:
+      - "3000:3000"
